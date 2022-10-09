@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 850px;
+    margin: auto;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+
+}
+
+.cards div {
+    padding: 3.5rem;
+
+}
+
+.card-one {
+    background-color: hsl(31, 77%, 52%);
+    border-top-left-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+}
+
+.card-two {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.card-three {
+    background-color: hsl(179, 100%, 13%) ;
+    border-top-right-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+}
+h2{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    color: hsl(0, 0%, 95%);
+    font-family:'Big Shoulders Display', cursive;;
+}
+p {
+    font-family: 'Lexend Deca';
+    font-size: .9rem;
+    font-weight: 400;
+    color: hsla(0, 0%, 100%, 0.75);
+    padding-bottom: 2rem;
+}
+
+button {
+    width: 80%;
+    margin: 0;
+    font-weight: 700;
+    background-color: hsl(0, 0%, 95%);
+    border: none;
+    margin-top: 1rem;
+    border-radius: 50px;
+    padding: 1rem;
+}
+
+.card-one button {
+    color: hsl(31, 77%, 52%);
+}
+.card-two button {
+    color: hsl(184, 100%, 22%);
+}
+.card-three button {
+    color: hsl(179, 100%, 13%);
+}
+
+button:hover {
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+@media screen and (max-width:700px) {
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+        margin: 3rem;
+        max-width: 344px;
+    }
+    .card-one {
+        border-top-right-radius: .5rem;
+        border-bottom-left-radius: revert;
+    }
+    .card-three {
+        border-top-right-radius: revert;
+        border-bottom-left-radius: .5rem;
+    }
+}
